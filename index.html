@@ -13,28 +13,6 @@ body{
     background:#0a0f1c;
     color:white;
     font-family:'Segoe UI';
-    scroll-behavior:smooth;
-}
-
-/* LOADER */
-#loader{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:#0a0f1c;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:9999;
-}
-#loader h1{
-    color:#7c4dff;
-    animation:pulse 1s infinite;
-}
-@keyframes pulse{
-    0%{opacity:0.3;}
-    50%{opacity:1;}
-    100%{opacity:0.3;}
 }
 
 /* NAVBAR */
@@ -43,48 +21,17 @@ body{
     border-bottom:1px solid #1f2a48;
 }
 .logo{
-    font-size:22px;
-    font-weight:bold;
     color:#7c4dff;
+    font-weight:bold;
 }
 
-/* HERO */
-.hero{
-    padding:100px 20px;
-}
-.gradient{
-    background: linear-gradient(90deg,#7c4dff,#00c6ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
+/* BUTTON */
 .btn-main{
     background:linear-gradient(90deg,#7c4dff,#00c6ff);
     border:none;
-    padding:10px 25px;
+    padding:10px 20px;
+    color:white;
     border-radius:10px;
-    color:white;
-}
-
-/* CARDS */
-.card{
-    background:#111827;
-    border:none;
-    border-radius:15px;
-    color:white;
-    transition:0.3s;
-}
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* SECTIONS */
-section{
-    padding:60px 20px;
-    animation:fadeIn 1s ease;
-}
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
 }
 
 /* FORM */
@@ -93,151 +40,77 @@ input, textarea{
     border:none !important;
     color:white !important;
 }
-
-/* FOOTER */
-footer{
-    border-top:1px solid #1f2a48;
-    padding:20px;
-    text-align:center;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#25D366;
-    padding:15px;
-    border-radius:50%;
-    color:white;
-    text-decoration:none;
-}
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div id="loader"><h1>amine ov</h1></div>
-
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar p-3">
 <div class="container">
 <div class="logo">amine ov</div>
-
-<div>
-<a href="#services" class="text-white me-3">خدماتي</a>
-<a href="#portfolio" class="text-white me-3">أعمالي</a>
-<a href="#contact" class="text-white">تواصل</a>
-</div>
 </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero container">
-<div class="row align-items-center">
-
-<div class="col-md-6">
-<h1>نحوّل أفكارك إلى <span class="gradient">منتجات رقمية</span></h1>
-<p>مواقع، تطبيقات، ومتاجر احترافية 🚀</p>
-<button class="btn-main">ابدأ مشروعك</button>
-</div>
-
-<div class="col-md-6 text-center">
-<img src="https://cdn-icons-png.flaticon.com/512/2721/2721294.png" width="300">
-</div>
-
-</div>
+<section class="container text-center mt-5">
+<h1>اطلب خدمة برمجية الآن 🚀</h1>
+<p>مواقع - تطبيقات - متاجر</p>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="container text-center">
-<h2>خدماتي</h2>
+<!-- ORDER FORM -->
+<section class="container text-center mt-5">
+<h2>إرسال طلب</h2>
 
-<div class="row mt-4">
-<div class="col-md-3"><div class="card p-3">💻 مواقع ويب</div></div>
-<div class="col-md-3"><div class="card p-3">📱 تطبيقات</div></div>
-<div class="col-md-3"><div class="card p-3">🛒 متاجر</div></div>
-<div class="col-md-3"><div class="card p-3">🎨 UI/UX</div></div>
-</div>
-</section>
+<form id="orderForm">
+<input id="name" class="form-control mb-2" placeholder="اسمك" required>
+<input id="phone" class="form-control mb-2" placeholder="رقمك" required>
+<textarea id="msg" class="form-control mb-2" placeholder="وش تحتاج" required></textarea>
 
-<!-- STATS -->
-<section class="container text-center">
-<div class="row">
-<div class="col-md-3"><h2>50+</h2><p>مشروع</p></div>
-<div class="col-md-3"><h2>30+</h2><p>عميل</p></div>
-<div class="col-md-3"><h2>2+</h2><p>خبرة</p></div>
-<div class="col-md-3"><h2>100%</h2><p>رضا</p></div>
-</div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio" class="container text-center">
-<h2>أعمالي</h2>
-
-<div class="row mt-4">
-<div class="col-md-4"><div class="card p-3">متجر إلكتروني</div></div>
-<div class="col-md-4"><div class="card p-3">تطبيق توصيل</div></div>
-<div class="col-md-4"><div class="card p-3">موقع شركة</div></div>
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="container text-center">
-<h2>آراء العملاء</h2>
-
-<div class="row mt-4">
-<div class="col-md-4"><div class="card p-3">"خدمة ممتازة"<br><strong>محمد</strong></div></div>
-<div class="col-md-4"><div class="card p-3">"تصميم احترافي"<br><strong>سارة</strong></div></div>
-<div class="col-md-4"><div class="card p-3">"أفضل مطور"<br><strong>أمين</strong></div></div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="container text-center">
-<h2>تواصل معي</h2>
-
-<form onsubmit="sendMsg(event)">
-<input id="name" class="form-control mb-2" placeholder="اسمك">
-<input id="phone" class="form-control mb-2" placeholder="رقمك">
-<textarea id="msg" class="form-control mb-2" placeholder="رسالتك"></textarea>
-
-<button class="btn-main">إرسال</button>
+<button class="btn-main">إرسال الطلب</button>
 </form>
 
-<p class="mt-4">📞 واتساب: 0663190202</p>
-<p>📘 <a href="https://www.facebook.com/share/1LWoyVPK99/" target="_blank" class="text-info">صفحتي على فيسبوك</a></p>
-
+<p id="status"></p>
 </section>
 
-<!-- FOOTER -->
-<footer>
-amine ov © 2026
-</footer>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/213663190202" class="whatsapp">💬</a>
+<!-- 🔥 Firebase Scripts -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
 
 <script>
-window.addEventListener("load",()=>{
-    document.getElementById("loader").style.display="none";
-});
+// 🔴 عوض هاد القيم بالقيم تاعك من Firebase
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID"
+};
 
-function sendMsg(e){
+// init firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// submit form
+document.getElementById("orderForm").addEventListener("submit", async (e)=>{
     e.preventDefault();
 
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
     let msg = document.getElementById("msg").value;
 
-    let url = "https://wa.me/213663190202?text="
-    + "الاسم: " + name + "%0A"
-    + "الهاتف: " + phone + "%0A"
-    + "الطلب: " + msg;
+    try{
+        await db.collection("orders").add({
+            name: name,
+            phone: phone,
+            msg: msg,
+            created: new Date()
+        });
 
-    window.open(url,"_blank");
-}
+        document.getElementById("status").innerText = "تم إرسال الطلب ✅";
+    }catch(err){
+        document.getElementById("status").innerText = "خطأ ❌";
+        console.log(err);
+    }
+});
 </script>
 
 </body>
