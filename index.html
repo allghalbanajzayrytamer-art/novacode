@@ -13,6 +13,28 @@ body{
     background:#0a0f1c;
     color:white;
     font-family:'Segoe UI';
+    scroll-behavior:smooth;
+}
+
+/* LOADER */
+#loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#0a0f1c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+#loader h1{
+    color:#7c4dff;
+    animation:pulse 1s infinite;
+}
+@keyframes pulse{
+    0%{opacity:0.3;}
+    50%{opacity:1;}
+    100%{opacity:0.3;}
 }
 
 /* NAVBAR */
@@ -30,10 +52,6 @@ body{
 .hero{
     padding:100px 20px;
 }
-.hero h1{
-    font-size:45px;
-    font-weight:bold;
-}
 .gradient{
     background: linear-gradient(90deg,#7c4dff,#00c6ff);
     -webkit-background-clip:text;
@@ -47,10 +65,7 @@ body{
     color:white;
 }
 
-/* SERVICES */
-.services{
-    padding:60px 20px;
-}
+/* CARDS */
 .card{
     background:#111827;
     border:none;
@@ -62,20 +77,17 @@ body{
     transform:translateY(-10px);
 }
 
-/* PORTFOLIO */
-.portfolio{
+/* SECTIONS */
+section{
     padding:60px 20px;
+    animation:fadeIn 1s ease;
 }
-.project{
-    background:#111827;
-    padding:20px;
-    border-radius:15px;
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
-/* CONTACT */
-.contact{
-    padding:60px 20px;
-}
+/* FORM */
 input, textarea{
     background:#111827 !important;
     border:none !important;
@@ -84,9 +96,9 @@ input, textarea{
 
 /* FOOTER */
 footer{
+    border-top:1px solid #1f2a48;
     padding:20px;
     text-align:center;
-    border-top:1px solid #1f2a48;
 }
 
 /* WHATSAPP */
@@ -97,13 +109,16 @@ footer{
     background:#25D366;
     padding:15px;
     border-radius:50%;
-    text-decoration:none;
     color:white;
+    text-decoration:none;
 }
 </style>
 </head>
 
 <body>
+
+<!-- LOADER -->
+<div id="loader"><h1>amine ov</h1></div>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg">
@@ -123,9 +138,8 @@ footer{
 <div class="row align-items-center">
 
 <div class="col-md-6">
-<h1>نحول أفكارك إلى <span class="gradient">منتجات رقمية</span></h1>
-<p>تصميم مواقع، تطبيقات، ومتاجر احترافية</p>
-
+<h1>نحوّل أفكارك إلى <span class="gradient">منتجات رقمية</span></h1>
+<p>مواقع، تطبيقات، ومتاجر احترافية 🚀</p>
 <button class="btn-main">ابدأ مشروعك</button>
 </div>
 
@@ -137,50 +151,52 @@ footer{
 </section>
 
 <!-- SERVICES -->
-<section class="services container" id="services">
-<h2 class="text-center mb-4">خدماتي</h2>
+<section id="services" class="container text-center">
+<h2>خدماتي</h2>
 
+<div class="row mt-4">
+<div class="col-md-3"><div class="card p-3">💻 مواقع ويب</div></div>
+<div class="col-md-3"><div class="card p-3">📱 تطبيقات</div></div>
+<div class="col-md-3"><div class="card p-3">🛒 متاجر</div></div>
+<div class="col-md-3"><div class="card p-3">🎨 UI/UX</div></div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="container text-center">
 <div class="row">
-<div class="col-md-3">
-<div class="card p-3 text-center">💻 مواقع ويب</div>
-</div>
-
-<div class="col-md-3">
-<div class="card p-3 text-center">📱 تطبيقات</div>
-</div>
-
-<div class="col-md-3">
-<div class="card p-3 text-center">🛒 متاجر</div>
-</div>
-
-<div class="col-md-3">
-<div class="card p-3 text-center">🎨 UI/UX</div>
-</div>
+<div class="col-md-3"><h2>50+</h2><p>مشروع</p></div>
+<div class="col-md-3"><h2>30+</h2><p>عميل</p></div>
+<div class="col-md-3"><h2>2+</h2><p>خبرة</p></div>
+<div class="col-md-3"><h2>100%</h2><p>رضا</p></div>
 </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section class="portfolio container" id="portfolio">
-<h2 class="text-center mb-4">أعمالي</h2>
+<section id="portfolio" class="container text-center">
+<h2>أعمالي</h2>
 
-<div class="row">
-<div class="col-md-4">
-<div class="project">متجر إلكتروني</div>
+<div class="row mt-4">
+<div class="col-md-4"><div class="card p-3">متجر إلكتروني</div></div>
+<div class="col-md-4"><div class="card p-3">تطبيق توصيل</div></div>
+<div class="col-md-4"><div class="card p-3">موقع شركة</div></div>
 </div>
+</section>
 
-<div class="col-md-4">
-<div class="project">تطبيق توصيل</div>
-</div>
+<!-- TESTIMONIALS -->
+<section class="container text-center">
+<h2>آراء العملاء</h2>
 
-<div class="col-md-4">
-<div class="project">موقع شركة</div>
-</div>
+<div class="row mt-4">
+<div class="col-md-4"><div class="card p-3">"خدمة ممتازة"<br><strong>محمد</strong></div></div>
+<div class="col-md-4"><div class="card p-3">"تصميم احترافي"<br><strong>سارة</strong></div></div>
+<div class="col-md-4"><div class="card p-3">"أفضل مطور"<br><strong>أمين</strong></div></div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact container" id="contact">
-<h2 class="text-center mb-4">تواصل معي</h2>
+<section id="contact" class="container text-center">
+<h2>تواصل معي</h2>
 
 <form onsubmit="sendMsg(event)">
 <input id="name" class="form-control mb-2" placeholder="اسمك">
@@ -190,10 +206,9 @@ footer{
 <button class="btn-main">إرسال</button>
 </form>
 
-<div class="mt-4 text-center">
-<p>📞 واتساب: 0663190202</p>
-<p>📘 فيسبوك: <a href="https://www.facebook.com/share/1LWoyVPK99/" target="_blank" class="text-info">اضغط هنا</a></p>
-</div>
+<p class="mt-4">📞 واتساب: 0663190202</p>
+<p>📘 <a href="https://www.facebook.com/share/1LWoyVPK99/" target="_blank" class="text-info">صفحتي على فيسبوك</a></p>
+
 </section>
 
 <!-- FOOTER -->
@@ -205,6 +220,10 @@ amine ov © 2026
 <a href="https://wa.me/213663190202" class="whatsapp">💬</a>
 
 <script>
+window.addEventListener("load",()=>{
+    document.getElementById("loader").style.display="none";
+});
+
 function sendMsg(e){
     e.preventDefault();
 
